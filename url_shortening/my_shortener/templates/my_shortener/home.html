@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Url Home</title>
+</head>
+<h1>My URL Shortening Tool</h1>
+<body>
+{% if error_message %}<p><p style="color: red">This URL is already entered: </p><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'my_shortener:result' %}" method="post">
+{% csrf_token %}
+    <h4>Enter the URL:</h4>
+    <input type="text" name="url" id="url"/>
+    <br><br>
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
