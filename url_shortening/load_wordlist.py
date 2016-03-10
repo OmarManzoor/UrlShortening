@@ -9,7 +9,7 @@ django.setup()
 
 from my_shortener.models import Wordlist
 
-fin = open('words.txt')
+fin = open('test_words.txt')
 
 words_list = []
 for line in fin:
